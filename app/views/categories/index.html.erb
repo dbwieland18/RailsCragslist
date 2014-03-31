@@ -1,0 +1,13 @@
+<h1>Categories</h1>
+<form action="/results" method="post" class="pure-form" id="target">
+  Pick a category
+  <select name="category" id="category">
+    <option value="" disabled selected>Select your option</option>
+    <% @categories.each do |cat| %>
+    <option value="<%=cat.name%>"><%=cat.name%></option>
+    <% end %>
+  </select>
+  <!-- <input name="search" id="search" placeholder="search"> -->
+  <input type="submit">
+</form>
+

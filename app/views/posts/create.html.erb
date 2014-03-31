@@ -1,0 +1,17 @@
+<form action="/posts" method="post">
+  <p><select name="category" id="category">
+      <% @categories.each do |cat| %>
+      <option value="<%= cat.id %>"><%= cat.name %></option>
+      <% end %>
+    </select></p>
+
+  <label for="title">Title: </label>
+  <p><input type="text" name="title" id="title"></p>
+  <label for="description">Description: </label>
+  <p><textarea name="description" id="description" cols="30" rows="10"></textarea></p>
+  <label for="email">Email: </label>
+  <p><input type="text" name="email" id="email"></p>
+  <label for="Price">Price: </label>
+  <p><input type="text" name="price" id="price"></p>
+  <p><input type="submit" value="Create post"></p>
+</form>

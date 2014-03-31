@@ -1,8 +1,10 @@
 RailsCraigslist::Application.routes.draw do
 
   root "categories#index"
-  get "category/:id" => "categories#show"
-  get "post/:id" => "posts#show"
+  get "category/:id" => "categories#show", as: "show_category"
+  get "posts/new" => "posts#new", as: "create_post"
+  get "posts/:id" => "posts#show", as: "show_post"
+  post "posts" => "posts#create"
 
 
 

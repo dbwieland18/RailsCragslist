@@ -15,6 +15,13 @@ class PostsController < ApplicationController
     redirect_to show_post_path(@post.id)
   end
 
+  def destroy
+    @post = Post.find(params[:id])
+    cat_id = @post.category.id
+    @post.delete
+    redirect_to show_category_path(cat_id)
+  end
+
   private
 
   def post_params

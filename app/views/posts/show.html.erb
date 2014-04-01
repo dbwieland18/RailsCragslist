@@ -3,3 +3,5 @@
 <p><%= @post.description %></p>
 <h6><%= @post.email %></h6>
 <p>$<%= @post.price %></p>
+<%= link_to 'Delete Post', destroy_post_path,
+			 method: :delete, data: { confirm: 'Are you sure?' } %> 

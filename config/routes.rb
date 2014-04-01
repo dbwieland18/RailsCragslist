@@ -4,7 +4,9 @@ RailsCraigslist::Application.routes.draw do
   get "category/:id" => "categories#show", as: "show_category"
   get "posts/new" => "posts#new", as: "create_post"
   get "posts/:id" => "posts#show", as: "show_post"
+  delete "posts/:id" => "posts#destroy", as: "destroy_post"
   post "posts" => "posts#create"
+
 
 
 
